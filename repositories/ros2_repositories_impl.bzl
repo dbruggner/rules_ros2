@@ -79,6 +79,12 @@ def ros2_repositories_impl():
 
     maybe(
         http_archive,
+        name = "ros2_image_transport_plugins",
+        build_file = "@com_github_mvukov_rules_ros2//repositories:image_transport_plugins.BUILD.bazel",
+    )
+
+    maybe(
+        http_archive,
         name = "ros2_launch",
         build_file = "@com_github_mvukov_rules_ros2//repositories:launch.BUILD.bazel",
         sha256 = "4c75be48263bfe7f95b82a7dc37806f7722d6af007556328963153546db3a4c9",
